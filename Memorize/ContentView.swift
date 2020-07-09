@@ -40,6 +40,8 @@ struct CardView: View {
                 RoundedRectangle(cornerRadius: 10.0).fill()
             }
         }
+        // Force each card to have a width to height ratio of 2:3
+        .aspectRatio(CGSize(width: 2, height: 3), contentMode: .fit)
     }
 }
 
