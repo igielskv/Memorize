@@ -22,6 +22,9 @@ struct MemoryGame<CardContent> {
             cards.append(Card(content: content, id: pairIndex * 2))
             cards.append(Card(content: content, id: pairIndex * 2 + 1))
         }
+        
+        // Shuffle cards Array
+        cards.shuffle()
     }
     
     struct Card: Identifiable {
