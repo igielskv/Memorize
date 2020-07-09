@@ -21,7 +21,8 @@ struct ContentView: View {
         }
         .padding()
         .foregroundColor(Color.orange)
-        .font(Font.largeTitle)
+        // In case of 5 pairs use smaller font to avoid clipping
+        .font(viewModel.cards.count / 2 < 5 ? Font.largeTitle : Font.body)
     }
 }
 
