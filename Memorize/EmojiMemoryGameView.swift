@@ -17,12 +17,11 @@ struct EmojiMemoryGameView: View {
                 CardView(card: card).onTapGesture {
                     self.viewModel.choose(card: card)
                 }
+                .aspectRatio(2/3, contentMode: .fit)
             }
         }
         .padding()
         .foregroundColor(Color.orange)
-        // In case of 5 pairs use smaller font to avoid clipping
-        .font(viewModel.cards.count / 2 < 5 ? Font.largeTitle : Font.body)
     }
 }
 
@@ -30,19 +29,34 @@ struct CardView: View {
     var card: MemoryGame<String>.Card
     
     var body: some View {
+        GeometryReader { geometry in
+            self.body(for: geometry.size)
+        }
+    }
+    
+    func body(for size: CGSize) -> some View {
         ZStack {
-            if card.isFaceUp {
-                RoundedRectangle(cornerRadius: 10.0)
+            if self.card.isFaceUp {
+                RoundedRectangle(cornerRadius: cornerRadius)
                     .fill(Color.white)
-                RoundedRectangle(cornerRadius: 10.0)
-                    .stroke(lineWidth: 3)
-                Text(card.content)
+                RoundedRectangle(cornerRadius: cornerRadius)
+                    .stroke(lineWidth: edgeLineWidth)
+                Text(self.card.content)
             } else {
-                RoundedRectangle(cornerRadius: 10.0).fill()
+                RoundedRectangle(cornerRadius: cornerRadius).fill()
             }
         }
-        // Force each card to have a width to height ratio of 2:3
-        .aspectRatio(CGSize(width: 2, height: 3), contentMode: .fit)
+        .font(Font.system(size: fontSize(for: size)))
+    }
+    
+    // MARK: - Drawing Constants
+    
+    let cornerRadius: CGFloat = 10.0
+    let edgeLineWidth: CGFloat = 3
+    let fontScaleFactor: CGFloat = 0.75
+    
+    func fontSize(for size: CGSize) -> CGFloat {
+        min(size.width, size.height) * fontScaleFactor
     }
 }
 
