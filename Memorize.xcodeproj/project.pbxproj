@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9F246F7924B6E64300390303 /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F246F7824B6E64300390303 /* EmojiMemoryGame.swift */; };
+		9F83CA6E24B8649900513DF7 /* MemorizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F83CA6D24B8649900513DF7 /* MemorizeTests.swift */; };
+		9F83CA7524B865C200513DF7 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB54BFE24B67380003353F1 /* MemoryGame.swift */; };
+		9F83CA7624B865C800513DF7 /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F246F7824B6E64300390303 /* EmojiMemoryGame.swift */; };
 		9FB54BFF24B67380003353F1 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB54BFE24B67380003353F1 /* MemoryGame.swift */; };
 		9FE23A1C24B5B347007A7F4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE23A1B24B5B347007A7F4F /* AppDelegate.swift */; };
 		9FE23A1E24B5B347007A7F4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE23A1D24B5B347007A7F4F /* SceneDelegate.swift */; };
@@ -17,8 +20,21 @@
 		9FE23A2824B5B348007A7F4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE23A2624B5B348007A7F4F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9F83CA7024B8649900513DF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FE23A1024B5B347007A7F4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FE23A1724B5B347007A7F4F;
+			remoteInfo = Memorize;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		9F246F7824B6E64300390303 /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
+		9F83CA6B24B8649900513DF7 /* MemorizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemorizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F83CA6D24B8649900513DF7 /* MemorizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeTests.swift; sourceTree = "<group>"; };
+		9F83CA6F24B8649900513DF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FB54BFE24B67380003353F1 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		9FE23A1824B5B347007A7F4F /* Memorize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE23A1B24B5B347007A7F4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +47,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9F83CA6824B8649900513DF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9FE23A1524B5B347007A7F4F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,10 +64,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F83CA6C24B8649900513DF7 /* MemorizeTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F83CA6D24B8649900513DF7 /* MemorizeTests.swift */,
+				9F83CA6F24B8649900513DF7 /* Info.plist */,
+			);
+			path = MemorizeTests;
+			sourceTree = "<group>";
+		};
 		9FE23A0F24B5B347007A7F4F = {
 			isa = PBXGroup;
 			children = (
 				9FE23A1A24B5B347007A7F4F /* Memorize */,
+				9F83CA6C24B8649900513DF7 /* MemorizeTests */,
 				9FE23A1924B5B347007A7F4F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				9FE23A1824B5B347007A7F4F /* Memorize.app */,
+				9F83CA6B24B8649900513DF7 /* MemorizeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +118,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9F83CA6A24B8649900513DF7 /* MemorizeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F83CA7424B8649900513DF7 /* Build configuration list for PBXNativeTarget "MemorizeTests" */;
+			buildPhases = (
+				9F83CA6724B8649900513DF7 /* Sources */,
+				9F83CA6824B8649900513DF7 /* Frameworks */,
+				9F83CA6924B8649900513DF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F83CA7124B8649900513DF7 /* PBXTargetDependency */,
+			);
+			name = MemorizeTests;
+			productName = MemorizeTests;
+			productReference = 9F83CA6B24B8649900513DF7 /* MemorizeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9FE23A1724B5B347007A7F4F /* Memorize */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FE23A2C24B5B348007A7F4F /* Build configuration list for PBXNativeTarget "Memorize" */;
@@ -111,6 +163,10 @@
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = macForce.one;
 				TargetAttributes = {
+					9F83CA6A24B8649900513DF7 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 9FE23A1724B5B347007A7F4F;
+					};
 					9FE23A1724B5B347007A7F4F = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -130,11 +186,19 @@
 			projectRoot = "";
 			targets = (
 				9FE23A1724B5B347007A7F4F /* Memorize */,
+				9F83CA6A24B8649900513DF7 /* MemorizeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9F83CA6924B8649900513DF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9FE23A1624B5B347007A7F4F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,6 +212,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9F83CA6724B8649900513DF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F83CA7524B865C200513DF7 /* MemoryGame.swift in Sources */,
+				9F83CA6E24B8649900513DF7 /* MemorizeTests.swift in Sources */,
+				9F83CA7624B865C800513DF7 /* EmojiMemoryGame.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9FE23A1424B5B347007A7F4F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,6 +236,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9F83CA7124B8649900513DF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FE23A1724B5B347007A7F4F /* Memorize */;
+			targetProxy = 9F83CA7024B8649900513DF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		9FE23A2624B5B348007A7F4F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -174,6 +256,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9F83CA7224B8649900513DF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JCQ8RQ8D68;
+				INFOPLIST_FILE = MemorizeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = one.macforce.MemorizeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Memorize.app/Memorize";
+			};
+			name = Debug;
+		};
+		9F83CA7324B8649900513DF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JCQ8RQ8D68;
+				INFOPLIST_FILE = MemorizeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = one.macforce.MemorizeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Memorize.app/Memorize";
+			};
+			name = Release;
+		};
 		9FE23A2A24B5B348007A7F4F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -331,6 +453,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9F83CA7424B8649900513DF7 /* Build configuration list for PBXNativeTarget "MemorizeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F83CA7224B8649900513DF7 /* Debug */,
+				9F83CA7324B8649900513DF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9FE23A1324B5B347007A7F4F /* Build configuration list for PBXProject "Memorize" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
