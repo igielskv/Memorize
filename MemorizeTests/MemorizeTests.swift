@@ -35,9 +35,9 @@ class MemorizeTests: XCTestCase {
         
         for _ in 1 ... 100 {
             let newGame = EmojiMemoryGame()
-            XCTAssertGreaterThanOrEqual(newGame.cards.count, 4)
-            XCTAssertLessThanOrEqual(newGame.cards.count, 10)
-            XCTAssertNotEqual(newGame.cards.description, previousGame.cards.description)
+            XCTAssertGreaterThanOrEqual(newGame.cards.count, 4, "Random number of pairs is less than 2")
+            XCTAssertLessThanOrEqual(newGame.cards.count, 10, "Random number of pairs is more than 5")
+            XCTAssertNotEqual(newGame.cards.description, previousGame.cards.description, "Two consequent card sets are same")
             previousGame = newGame
         }
     }
